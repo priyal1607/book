@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<style>
+    body{
+        background-color:darkseagreen;
+    }
+    #s{
+        color: white;
+        margin-left: 76%;
+    }
+
+    nav{
+        font-size: 200%;
+        background-color: black;
+    }
+    
+    #f{
+        margin-top: 3%;
+        font-size: 500%;
+        text-align: center;
+        border: 1px solid black;
+        background-color: rgb(6, 7, 7);
+        color: white;
+    }
+    .third{
+       
+        display: flex;
+        flex-flow: row wrap;
+    }
+    .fy{
+        padding-right: 4%;
+        color: #140f08;
+    }
+    #g{
+        text-align: center;
+        font-size: 400%;
+    }
+    .h{
+        background-color: rgb(29, 35, 43);
+        text-align: center;
+        border: 1px solid black;
+        padding-bottom: 1%;
+        color: white;
+    }
+    #j{
+        font-size: 250%;
+    }
+</style>
+</head>
+<body>
+  
+    
+        <nav>
+            <a href=""><div id="s">
+            Home|
+            About us|
+            Contact us
+        </div>
+        </a>
+        </nav>
+   <p id="f"> Book </p>
+  
+    <div class="third">
+        {% for i in a %}
+        <div class="fy">
+            <h1>{{i.book}}</h1>
+            <b>author:{{i.authorname}}</b><br>
+            <img src="{{i.img.url}}"  height="300" width="300">
+        </div>
+
+        {% endfor %}
+    </div>
+<a href=""><div class="h">
+    <p id="g">Contact Us </p>
+    
+           <p id="j">+91124566777<br> email:abc@gmail.com</p>
+</div>
+</a>
+</body>
+</html>
